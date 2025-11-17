@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Positioning Boxes</title>
+
+    <style>
+        .container {
+            width: 400px;
+            height: 400px;
+            background: #d1cbcb;
+            position: relative;  /* Parent for absolute */
+            margin-bottom: 100px;
+            padding: 10px;
+        }
+
+        .box {
+            width: 150px;
+            height: 150px;
+            background: #ddd;
+            margin: 10px;
+            display: inline-block;
+        }
+
+        .relative {
+            position: relative;
+            background: #c2e0ff;
+            top: 20px;   /* Move down */
+            left: 20px;  /* Move right */
+        }
+
+        .absolute {
+            position: absolute;
+            background: #ffddc1;
+            bottom: 10px; /* bottom-right of parent */
+            right: 10px;
+        }
+
+        .fixed {
+            position: fixed;
+            background: #ffcfcf;
+            bottom: 10px; /* bottom-left of screen */
+            left: 10px;
+        }
+
+        .static {
+            position: static; /* Normal flow */
+            background: #d3ffd3;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="box static">Static Box</div>
+    <div class="box relative">Relative Box</div>
+    <div class="box absolute">Absolute Box</div>
+</div>
+
+<div class="box fixed">Fixed Box</div>
+
+</body>
+</html>
