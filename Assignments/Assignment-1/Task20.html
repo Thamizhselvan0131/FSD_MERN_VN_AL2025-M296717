@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Responsive Card Grid</title>
+
+<style>
+    .card-container {
+        display: grid;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .card {
+        background: #f1f1f1;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        border: 1px solid #8e8ab3;
+    }
+
+    
+    @media (max-width: 479px) {
+        .card-container {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (min-width: 480px) and (max-width: 768px) {
+        .card-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    
+    @media (min-width: 769px) and (max-width: 1200px) {
+        .card-container {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+   
+    @media (min-width: 1201px) {
+        .card-container {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="card-container">
+    <div class="card">Card 1</div>
+    <div class="card">Card 2</div>
+    <div class="card">Card 3</div>
+    <div class="card">Card 4</div>
+    <div class="card">Card 5</div>
+    <div class="card">Card 6</div>
+    <div class="card">Card 7</div>
+    <div class="card">Card 8</div>
+</div>
+
+</body>
+</html>
